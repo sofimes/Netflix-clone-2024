@@ -47,10 +47,16 @@ const Rowlist = () => {
 			<Row
 				title="TV SHOW"
 				fetchUrl={`https://api.themoviedb.org/3${requests.fetchTvshow}`}
-				isLargeRow={false}
+				isLargeRow={true}
 			/>
 		</>
 	);
 };
 
 export default Rowlist;
+{
+	/* <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> */
+}
+{
+	/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */
+}

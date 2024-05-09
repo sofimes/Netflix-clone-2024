@@ -56,3 +56,8 @@
 		#111
 	);
 }
+@media (max-width: 860px) {
+	.banner {
+		background-size: 80%;
+	}
+}
