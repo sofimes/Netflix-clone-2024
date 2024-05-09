@@ -1,13 +1,13 @@
 .row__poster {
 	width: 100%;
 	object-fit: contain;
-	max-height: 100px;
+	max-height: 180px;
 	margin-right: 10px;
 	transition: transform 450ms;
 }
 .row__posters {
 	overflow-x: scroll;
-	padding: 20px;
+	padding: 30px;
 	overflow-y: hidden;
 	display: flex;
 	height: 200px;
@@ -37,4 +37,7 @@
 	.trailer {
 		width: 100%;
 	}
+}
+p {
+	font-size: 1px;
 }

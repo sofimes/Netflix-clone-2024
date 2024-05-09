@@ -7,7 +7,7 @@ const Rowlist = () => {
 			<Row
 				title="NETFLIX ORIGINALS"
 				fetchUrl={`https://api.themoviedb.org/3${requests.fetchNetflixOriginals}`}
-				isLargeRow={true}
+				isLargeRow={false}
 			/>
 			<Row
 				title="TRENDING NEW"
