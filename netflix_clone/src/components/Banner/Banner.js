@@ -4,8 +4,7 @@ import requests from "../../Utils/requests";
 import axios from "../../Utils/axios";
 import "./banner.css";
 const Banner = () => {
-	const [movie, setMovie] = useState({});
-	const API_KEY = process.env.REACT_APP_API_KEY;
+	const [movies, setMovie] = useState({});
 	useEffect(() => {
 		(async () => {
 			try {
@@ -31,7 +30,7 @@ const Banner = () => {
 			className="banner"
 			style={{
 				backgroundSize: "cover",
-				backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
+				backgroundImage: `url('https://image.tmdb.org/t/p/original${movies?.backdrop_path}')`,
 				backgroundPosition: "center",
 				backgroundRepeat: "no-repeat",
 			}}
@@ -41,14 +40,14 @@ const Banner = () => {
 					className="banner__
 				title"
 				>
-					{movie?.title || movie?.name || movie?.original_name}
+					{movies?.title || movies?.name || movies?.original_name}
 				</h1>
 				<div className="banner__buttons">
 					<button className="banner__button play">play</button>
 					<button className="banner__button">My List</button>
 				</div>
 				<h1 className="banner__description">
-					{truncate(movie?.overview, 150)}
+					{truncate(movies?.overview, 150)}
 				</h1>
 			</div>
 			<div className="banner__fadeBottom" />
