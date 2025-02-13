@@ -1,63 +1,97 @@
 .header_outer_container {
-	position: sticky;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: rgb(20, 20, 20);
-	background-color: transparent;
-	height: 10vh;
-	color: white;
-	transition: 0.5s;
-	transition-timing-function: ease-in;
-	z-index: 1;
-	/* background-color: red; */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 10vh;
+  color: white;
+  transition: 0.5s ease-in;
+  z-index: 1000;
 }
+
+/* Add black background when scrolling */
 .nav_black {
-	background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20);
 }
+
 .header_container {
-	width: 90%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-.header_left ul {
-	width: 140%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	list-style: none;
-	cursor: pointer;
+
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
+.netflix_logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav_links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Right Section (Icons) */
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .header_right ul {
-	width: 140%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	list-style: none;
-	cursor: pointer;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
 }
+.nav_links li:hover {
+  text-decoration: underline;
+}
+/* Menu Icon (Hidden by Default) */
+.menu_icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
 @media (max-width: 860px) {
-	.header_left ul {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.header_right ul {
-		width: 100%;
-	}
-	.header_outer_container {
-		width: 100%;
-	}
-	.header_container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.header_left li {
-		font-size: 2vh;
-		padding: 0 10px 0 5px;
-	}
+  .nav_links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  /* Show the menu when the button is clicked */
+  .nav_links.active {
+    display: flex;
+  }
+
+  .menu_icon {
+    display: block;
+  }
+
+  .header_right ul {
+    display: none;
+  }
 }
